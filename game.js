@@ -325,22 +325,5 @@ function collapseBuilding() {
     }, delay + 500);
 }
 
-// Тестовое поле для отладки
-const debugFloorsEl = document.getElementById('debugFloors');
-const debugBtn = document.getElementById('debugBtn');
-
-debugBtn.addEventListener('click', () => {
-    const targetFloors = parseInt(debugFloorsEl.value) || 0;
-    buildingEl.innerHTML = '';
-    floorCount = 0;
-
-    for (let i = 1; i <= targetFloors; i++) {
-        floorCount = i;
-        addFloor();
-    }
-
-    floorCountEl.textContent = floorCount;
-});
-
 // Запуск игры
 init();
